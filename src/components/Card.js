@@ -1,7 +1,9 @@
-function Card() {
+function Card(props) {
+    const {name, image} = props;
     return (
-      <div>
-        <p>Card</p>
+      <div className="card">
+        <img alt="houseplant"src={image}></img>
+        <p className="plant-name">{name}</p>
       </div>
     );
   }
