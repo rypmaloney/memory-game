@@ -1,8 +1,9 @@
+
 function Card(props) {
     const {name, image} = props;
     return (
       <div className="card">
-        <img alt="houseplant"src={image}></img>
+        <img alt={name} src={image}></img>
         <p className="plant-name">{name}</p>
       </div>
     );

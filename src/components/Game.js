@@ -1,6 +1,7 @@
 import React from "react";
 import "../Game.css";
 import Card from "./Card";
+import dracaena from "./images/Plants/monstera.jpg"
 
 class Game extends React.Component{
   constructor(props) {
@@ -9,7 +10,7 @@ class Game extends React.Component{
       plants: [
         {
           name:"Dracaena",
-          image:"",
+          image: dracaena,
           id:1,
         },
         {
@@ -44,7 +45,6 @@ class Game extends React.Component{
                 </div>
             </header>
             <main>
-                <Card />
                 {this.state.plants.map(plant => {
                   return <Card name={plant.name} image={plant.image} />
                 })}
