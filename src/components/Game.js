@@ -16,93 +16,111 @@ import rubber from "./images/Plants/rubber.jpg";
 import zz from "./images/Plants/zz.jpg";
 
 const Game = () => {
-  const [plants, setPlants] = useState([
-    {
-        name: "Dracaena",
-        image: dracaena,
-        id: 1,
-    },
-    {
-        name: "Monstera Deliciosa",
-        image: monstera,
-        id: 2,
-    },
-    {
-        name: "Pilea Peromiodes",
-        image: pancake,
-        id: 3,
-    },
-    {
-        name: "Aloe Vera",
-        image: aloe,
-        id: 4,
-    },
-    {
-        name: "Snake Plant",
-        image: snake,
-        id: 5,
-    },
-    {
-        name: "Fiddle Leaf Fig",
-        image: fig,
-        id: 6,
-    },
-    {
-        name: "Ficus",
-        image: ficus,
-        id: 7,
-    },
-    {
-        name: "Money Tree",
-        image: money,
-        id: 8,
-    },
-    {
-        name: "Philodendron",
-        image: philo,
-        id: 9,
-    },
-    {
-        name: "Bonsai Tree",
-        image: bonsai,
-        id: 10,
-    },
-    {
-        name: "Rubber Tree",
-        image: rubber,
-        id: 11,
-    },
-    {
-        name: "ZZ Plant",
-        image: zz,
-        id: 12,
-    },
-  ])
 
+    const [plants, setPlants] = useState([ 
+       {
+         name: "Dracaena",
+         image: dracaena,
+         id: 1,
+     },
+     {
+         name: "Monstera Deliciosa",
+         image: monstera,
+         id: 2,
+     },
+     {
+         name: "Pilea Peromiodes",
+         image: pancake,
+         id: 3,
+     },
+     {
+         name: "Aloe Vera",
+         image: aloe,
+         id: 4,
+     },
+     {
+         name: "Snake Plant",
+         image: snake,
+         id: 5,
+     },
+     {
+         name: "Fiddle Leaf Fig",
+         image: fig,
+         id: 6,
+     },
+     {
+         name: "Ficus",
+         image: ficus,
+         id: 7,
+     },
+     {
+         name: "Money Tree",
+         image: money,
+         id: 8,
+     },
+     {
+         name: "Philodendron",
+         image: philo,
+         id: 9,
+     },
+     {
+         name: "Bonsai Tree",
+         image: bonsai,
+         id: 10,
+     },
+     {
+         name: "Rubber Tree",
+         image: rubber,
+         id: 11,
+     },
+     {
+         name: "ZZ Plant",
+         image: zz,
+         id: 12,
+     },
+     ]
+    )
+        
 
-        return (
-            <div>
-                <header>
-                    <h1>House Plant Memory Game</h1>
-                    <div className="score-block">
-                        <p>Current Score: </p>
-                        <p>High Score: </p>
-                    </div>
-                </header>
-                <main>
-                    {plants.map((plant) => {
-                        return (
-                            <Card
-                                name={plant.name}
-                                image={plant.image}
-                                key={plant.id}
-                            />
-                        );
-                    })}
-                </main>
-            </div>
-        );
-    }
+    useEffect(() => {
+        let newArray = shuffleArray(plants)
+        setPlants(newArray)
+        console.log(plants)
+      
 
+    }, [plants]);
+
+    return (
+        <div>
+            <header>
+                <h1>House Plant Memory Game</h1>
+                <div className="score-block">
+                    <p>Current Score: </p>
+                    <p>High Score: </p>
+                </div>
+            </header>
+            <main>
+                {plants.map((plant) => {
+                    return (
+                        <Card
+                            name={plant.name}
+                            image={plant.image}
+                            key={plant.id}
+                        />
+                    );
+                })}
+            </main>
+        </div>
+    );
+};
+
+//ES6 optimized Durstenfeld Shuffle from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array
+}
 
 export default Game;
