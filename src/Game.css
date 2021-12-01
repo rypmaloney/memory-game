@@ -5,16 +5,24 @@
 .card {
   width: 200px;
   height: 250px;
-  border: 1px solid blue;
-  margin: auto;
+  border: 2px solid rgb(49, 49, 99);
+  margin: 10px auto;
+  box-shadow: 5px 10px 20px cadetblue;
 }
 
 .card img {
   width: 200px;
-  height: 240px;
+  height: 225px;
   object-fit: cover;
 }
 main{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+}
+.card p{
+  margin: 0;
+  text-align: center;
+  font-style: oblique;
+  font-size: 12px;
 }
