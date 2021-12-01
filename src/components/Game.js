@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../Game.css";
 import Card from "./Card";
 
@@ -15,76 +15,71 @@ import bonsai from "./images/Plants/bonsai.jpg";
 import rubber from "./images/Plants/rubber.jpg";
 import zz from "./images/Plants/zz.jpg";
 
-class Game extends React.Component {
-    constructor(props) {
-        super();
-        this.state = {
-            plants: [
-                {
-                    name: "Dracaena",
-                    image: dracaena,
-                    id: 1,
-                },
-                {
-                    name: "Monstera Deliciosa",
-                    image: monstera,
-                    id: 2,
-                },
-                {
-                    name: "Pilea Peromiodes",
-                    image: pancake,
-                    id: 3,
-                },
-                {
-                    name: "Aloe Vera",
-                    image: aloe,
-                    id: 4,
-                },
-                {
-                    name: "Snake Plant",
-                    image: snake,
-                    id: 5,
-                },
-                {
-                    name: "Fiddle Leaf Fig",
-                    image: fig,
-                    id: 6,
-                },
-                {
-                    name: "Ficus",
-                    image: ficus,
-                    id: 7,
-                },
-                {
-                    name: "Money Tree",
-                    image: money,
-                    id: 8,
-                },
-                {
-                    name: "Philodendron",
-                    image: philo,
-                    id: 9,
-                },
-                {
-                    name: "Bonsai Tree",
-                    image: bonsai,
-                    id: 10,
-                },
-                {
-                    name: "Rubber Tree",
-                    image: rubber,
-                    id: 11,
-                },
-                {
-                    name: "ZZ Plant",
-                    image: zz,
-                    id: 12,
-                },
-            ],
-        };
-    }
+const Game = () => {
+  const [plants, setPlants] = useState([
+    {
+        name: "Dracaena",
+        image: dracaena,
+        id: 1,
+    },
+    {
+        name: "Monstera Deliciosa",
+        image: monstera,
+        id: 2,
+    },
+    {
+        name: "Pilea Peromiodes",
+        image: pancake,
+        id: 3,
+    },
+    {
+        name: "Aloe Vera",
+        image: aloe,
+        id: 4,
+    },
+    {
+        name: "Snake Plant",
+        image: snake,
+        id: 5,
+    },
+    {
+        name: "Fiddle Leaf Fig",
+        image: fig,
+        id: 6,
+    },
+    {
+        name: "Ficus",
+        image: ficus,
+        id: 7,
+    },
+    {
+        name: "Money Tree",
+        image: money,
+        id: 8,
+    },
+    {
+        name: "Philodendron",
+        image: philo,
+        id: 9,
+    },
+    {
+        name: "Bonsai Tree",
+        image: bonsai,
+        id: 10,
+    },
+    {
+        name: "Rubber Tree",
+        image: rubber,
+        id: 11,
+    },
+    {
+        name: "ZZ Plant",
+        image: zz,
+        id: 12,
+    },
+  ])
 
-    render() {
+
         return (
             <div>
                 <header>
@@ -95,7 +90,7 @@ class Game extends React.Component {
                     </div>
                 </header>
                 <main>
-                    {this.state.plants.map((plant) => {
+                    {plants.map((plant) => {
                         return (
                             <Card
                                 name={plant.name}
@@ -108,6 +103,6 @@ class Game extends React.Component {
             </div>
         );
     }
-}
+
 
 export default Game;
