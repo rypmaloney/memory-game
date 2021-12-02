@@ -1,12 +1,11 @@
-
 function Card(props) {
-    const {name, image} = props;
+    const { name, image, switchClicked, id } = props;
     return (
-      <div className="card">
-        <img alt={name} src={image}></img>
-        <p className="plant-name">{name}</p>
-      </div>
+        <div onClick={switchClicked} id={id} className="card">
+            <img alt={name} src={image}></img>
+            <p className="plant-name">{name}</p>
+        </div>
     );
-  }
-  
-  export default Card;
+}
+
+export default Card;
