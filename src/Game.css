@@ -1,13 +1,21 @@
-.App {
+.game {
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgba(145, 181, 182, 0.808)
+}
+
+h1{
+  color: rgb(38, 85, 38);
 }
 
 .card {
+  background-color: wheat;
   width: 200px;
   height: 250px;
   border: 2px solid rgb(49, 49, 99);
   margin: 15px auto;
-  box-shadow: 5px 10px 20px cadetblue;
+  box-shadow: 5px 10px 20px rgb(54, 89, 90);
+  cursor: pointer;
 }
 
 .card img {

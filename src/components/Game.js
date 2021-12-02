@@ -93,6 +93,8 @@ const Game = () => {
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
 
+
+    
     const shufflePlants = () => {
         setPlants(shuffleArray(plants.slice()));
     };
@@ -129,10 +131,10 @@ const Game = () => {
 
     useEffect(() => {
         setPlants(shuffleArray(plants));
-    }, [plants]);
+    }, []);
 
     return (
-        <div>
+        <div className="game">
             <header>
                 <h1>House Plant Memory Game</h1>
                 <div className="score-block">
@@ -158,7 +160,8 @@ const Game = () => {
     );
 };
 
-//ES6 optimized Durstenfeld Shuffle from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+//ES6 optimized Durstenfeld Shuffle 
+//from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
