@@ -131,7 +131,7 @@ const Game = () => {
 
     useEffect(() => {
         setPlants(shuffleArray(plants));
-    }, []);
+    }, [plants]);
 
     return (
         <div className="game">
