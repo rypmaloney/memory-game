@@ -8,6 +8,16 @@ h1{
   color: rgb(38, 85, 38);
 }
 
+header p {
+  font-size: 20px;
+  margin: 5px;
+  color: rgb(160, 88, 0);
+}
+
+header{
+  padding-top: 20px
+}
+
 .card {
   background-color: wheat;
   width: 200px;
