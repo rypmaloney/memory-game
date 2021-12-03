@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/memory-game/static/css/main.58c1e5ad.chunk.css",
+    "main.js": "/memory-game/static/js/main.bb35ebb5.chunk.js",
+    "main.js.map": "/memory-game/static/js/main.bb35ebb5.chunk.js.map",
+    "runtime-main.js": "/memory-game/static/js/runtime-main.cd75cd85.js",
+    "runtime-main.js.map": "/memory-game/static/js/runtime-main.cd75cd85.js.map",
+    "static/js/2.562802c2.chunk.js": "/memory-game/static/js/2.562802c2.chunk.js",
+    "static/js/2.562802c2.chunk.js.map": "/memory-game/static/js/2.562802c2.chunk.js.map",
+    "index.html": "/memory-game/index.html",
+    "static/css/main.58c1e5ad.chunk.css.map": "/memory-game/static/css/main.58c1e5ad.chunk.css.map",
+    "static/js/2.562802c2.chunk.js.LICENSE.txt": "/memory-game/static/js/2.562802c2.chunk.js.LICENSE.txt",
+    "static/media/bonsai.e8e73a5e.jpg": "/memory-game/static/media/bonsai.e8e73a5e.jpg",
+    "static/media/dracaena.729a2042.jpg": "/memory-game/static/media/dracaena.729a2042.jpg",
+    "static/media/monstera.1696027c.jpg": "/memory-game/static/media/monstera.1696027c.jpg",
+    "static/media/philodendron.fe18483f.jpg": "/memory-game/static/media/philodendron.fe18483f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cd75cd85.js",
+    "static/js/2.562802c2.chunk.js",
+    "static/css/main.58c1e5ad.chunk.css",
+    "static/js/main.bb35ebb5.chunk.js"
+  ]
+}
